@@ -1,0 +1,67 @@
+{
+  "expenses": [
+    {
+      "id": "3f7a",
+      "amount": 699,
+      "category": "Shopping",
+      "date": "2026-01-14",
+      "description": "Shpooing pe kharcha"
+    },
+    {
+      "id": "a4ea",
+      "amount": 700,
+      "category": "Bills",
+      "date": "2026-01-15",
+      "description": "Bills pe kharcha"
+    },
+    {
+      "id": "c78b",
+      "amount": 1500,
+      "category": "Travel",
+      "date": "2026-01-20",
+      "description": "Travel ka expense"
+    },
+    {
+      "id": "fd29",
+      "amount": 888,
+      "category": "Food",
+      "date": "2026-01-16",
+      "description": "Dubara "
+    },
+    {
+      "id": "aba2",
+      "amount": 2100,
+      "category": "Travel",
+      "date": "2026-01-22",
+      "description": "Bengaluru"
+    },
+    {
+      "id": "e57d",
+      "amount": 5999,
+      "category": "Bills",
+      "date": "2026-01-16",
+      "description": "Mobile,OTT recharge"
+    },
+    {
+      "id": "e64b",
+      "amount": 250,
+      "category": "Food",
+      "date": "2026-01-13",
+      "description": "Makar sankranti shopping"
+    },
+    {
+      "id": "d36a",
+      "amount": 566,
+      "category": "Food",
+      "date": "2026-01-16",
+      "description": "Chhole,Puri,Kheer"
+    },
+    {
+      "id": "7126",
+      "amount": 700,
+      "category": "Shopping",
+      "date": "2026-01-16",
+      "description": "Shirt & Jeans "
+    }
+  ]
+}
