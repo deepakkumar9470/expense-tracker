@@ -48,22 +48,32 @@ const Dashboard = () => {
           <SummaryCards expenses={filteredExpenses} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div className="lg:col-span-8 space-y-6">
-            <ExpenseFilters filters={filters} setFilters={setFilters} />
-            <Suspense fallback={<LoadingSkeleton />}>
-              <ExpenseListLazy expenses={filteredExpenses} />
-            </Suspense>
+        {/* Show empty state if no data */}
+        {filteredExpenses.length === 0 ? (
+          <div className="text-center text-zinc-400 py-20">
+            <p className="text-xl font-medium">No expenses found</p>
+            <p className="text-sm mt-2">
+              Add your first expense to see analytics & filters.
+            </p>
           </div>
-
-          <div className="lg:col-span-4">
-            <div className="sticky top-6">
-              <Suspense fallback={<ChartSkeleton />}>
-                <ExpensesChartLazy expenses={filteredExpenses} />
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div className="lg:col-span-8 space-y-6">
+              <ExpenseFilters filters={filters} setFilters={setFilters} />
+              <Suspense fallback={<LoadingSkeleton />}>
+                <ExpenseListLazy expenses={filteredExpenses} />
               </Suspense>
             </div>
+
+            <div className="lg:col-span-4">
+              <div className="sticky top-6">
+                <Suspense fallback={<ChartSkeleton />}>
+                  <ExpensesChartLazy expenses={filteredExpenses} />
+                </Suspense>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

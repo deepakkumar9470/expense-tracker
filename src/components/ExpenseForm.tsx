@@ -42,19 +42,20 @@ const ExpenseForm = () => {
 
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-zinc-400 mb-2">
+              <label htmlFor="amount" className="block text-sm font-medium text-zinc-400 mb-2">
                 Amount
               </label>
               <input
                 {...form.register("amount")}
                 type="number"
                 placeholder="1000"
+                aria-label="Amount" 
                 className="w-full bg-zinc-800 border border-zinc-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-blue-500 transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-zinc-400 mb-2">
+              <label htmlFor="category" className="block text-sm font-medium text-zinc-400 mb-2">
                 Category
               </label>
               <select
@@ -71,10 +72,11 @@ const ExpenseForm = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-zinc-400 mb-2">
+              <label htmlFor="date" className="block text-sm font-medium text-zinc-400 mb-2">
                 Date
               </label>
               <input
+              id="date"
                 type="date"
                 {...form.register("date")}
                 className="w-full bg-zinc-800 border border-zinc-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-blue-500 transition-colors"
@@ -82,13 +84,14 @@ const ExpenseForm = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-zinc-400 mb-2">
+              <label htmlFor="description" className="block text-sm font-medium text-zinc-400 mb-2">
                 Description
               </label>
               <textarea
                 {...form.register("description")}
                 placeholder="Enter description"
                 rows={3}
+                 aria-label="Description" 
                 className="w-full bg-zinc-800 border border-zinc-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-blue-500 transition-colors resize-none"
               />
             </div>

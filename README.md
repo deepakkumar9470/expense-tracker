@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+Steps to run 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. GO to expense-trcaker folder
+2. npm  install
+3. to run (npm run dev:all)
 
-Currently, two official plugins are available:
+🚀 Features
+✅ Functional Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add, Edit, and Delete Expenses
 
-## React Compiler
+Each expense includes:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Amount
 
-## Expanding the ESLint configuration
+Category
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Date
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Description
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Filtering
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Filter expenses by:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Category
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Date range (From → To)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Summary Cards
+
+Displays:
+
+Total expenses
+
+Category-wise expense breakdown
+
+Expense List with Pagination
+
+Handles large datasets efficiently.
+
+Smooth navigation between pages.
+
+Data Visualization
+
+Bar chart showing:
+
+Expenses grouped by category.
+
+🛠 Technical Highlights
+
+⚡ React + TypeScript for type safety and scalability
+
+🎨 Tailwind CSS for modern, responsive UI
+
+🧠 React Hook Form + Zod for robust form validation
+
+🔄 React Query (TanStack) for efficient data fetching and caching
+
+🧩 Lazy Loading & Code Splitting using React.lazy and Suspense
+
+♻️ Clean Architecture & Reusable Components
+
+📊 Recharts for data visualization
+
+🗄 json-server as a mock backend
+
+🧪 Playwright for end-to-end testing
